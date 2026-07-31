@@ -1,0 +1,179 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+.grandfather{
+  /* background-color: black; */
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: purple;
+    flex-wrap: wrap;
+    position: sticky;
+    color: white;
+}
+
+.navmenu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navmenu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: mv boli;
+  align-items: center;
+}
+
+.navright{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+img{
+    height: 60px;
+    width: 60px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navmenu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navmenu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: mv boli;
+  color: white;
+}
+
+.main-body{
+  display: flex;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+h1{
+  justify-content: center;
+  align-items: center;
+  color: purple;
+  font-family: mv boli;
+}
+
+h2{
+   display: flex;
+  font-family: Algerian;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourservices{
+  background-color: orange;
+  color: white;
+  font-family: mv boli;
+  border: 2px dashed red;
+  height: max-content;
+}
+
+.about{
+  background-color: blue;
+  color: goldenrod;
+  height: 900px;
+}
+
+.ourcorevalues{
+  background-color: yellow;
+  color: green;
+  height: 900px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; 
+    }
+
+    .hamburger{
+      display: flex;
+    }
+
+    .navmenu {
+      display: none;
+      order: 1;
+      width: 100%;
+      flex-direction: column;
+      padding: 10px 0;
+      background-color: purple;
+      gap: 12px;
+    }
+
+    .nav-toggle:checked ~ .navmenu {
+      display: flex;
+    }
+
+    .nav-toggle:checked + .hamburger span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .nav-toggle:checked + .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle:checked + .hamburger span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+}
