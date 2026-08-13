@@ -9,22 +9,28 @@
 <body>
     <div class="grandfather">
         <div class="navbar">
-            <div class="logo">
-                <img src="IMG-20260621-WA0017.jpg" alt="madrasah logo">
+            <div class="logo-container">
+                <img src="IMG-20260621-WA0017.jpg" alt="madrasah logo" class="logo">
+                <div class="logo-side">
+                    <span> Al-Abroor Madrasah</span>
+                    <span> The institute of learning</span>
+                </div>
             </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
             <label for="nav-toggle" class="hamburger">
               <span></span>
               <span></span>
               <span></span>
             </label>
-            <nav class="navmenu">
-                <a href="#">Home</a>
-                <a href="#our services">Our services</a>
-                <a href="#about">About us</a>
-                <a href="#core values">Core values</a>
-                <a href="#">Contacts</a>
-            </nav>
+            <div class="nav-right">
+                <nav class="navmenu">
+                    <a href="#">Home</a>
+                    <a href="#our services">Our services</a>
+                    <a href="#about">About us</a>
+                    <a href="#core values">Core values</a>
+                </nav>
+                <a href="#contact" class="contact-btn">Contact us</a>
+            </div>
         </div>
         <div class="main-body">
             <h1>WELCOME TO AL-ABROOR MADRASAH (THE INSTITUTE OF LEARNING)</h1>
