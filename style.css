@@ -167,25 +167,17 @@ h2{
 }
 
 @media (max-width: 768px) {
-    /* Stack navbar items so logo stays at top */
+    /* Keep header row stable; dropdown will be absolutely positioned */
     .navbar {
-      flex-direction: column;
-      align-items: stretch;
+      flex-direction: row;
+      align-items: center;
       padding-left: 8px;
       padding-right: 8px;
       position: relative;
+      min-height: 64px; /* keep header height stable so hamburger stays aligned */
     }
 
-    /* show hamburger */
-    .hamburger {
-      display: flex;
-      order: 1;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 10px;
-      margin: 0;
-    }
+
 
     /* keep logo at the very top */
     .logo-container {
@@ -196,24 +188,40 @@ h2{
       align-items: center;
       padding: 8px;
       gap: 0.5rem;
+      position: relative;
     }
 
-    /* hide the full right block until toggled */
+    /* show hamburger and align it vertically with the logo */
+    .hamburger {
+      display: flex;
+      order: 1;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin: 0;
+      transform: translateY(-50%);
+      z-index: 999; /* keep above expanded nav */
+    }
+
+    /* hide the full right block until toggled; dropdown appears below header */
     .nav-right {
       display: none;
-      order: 2;
+      position: absolute;
+      top: 100%;
+      left: 0;
       width: 100%;
-    }
-
-    /* when checkbox toggled, reveal nav-right as a vertical column */
-    .nav-toggle:checked ~ .nav-right {
-      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       gap: 12px;
       padding: 10px 0;
       background-color: purple;
+      z-index: 500;
+    }
+
+    /* when checkbox toggled, reveal nav-right */
+    .nav-toggle:checked ~ .nav-right {
+      display: flex;
     }
 
     /* arrange nav links vertically inside the revealed column */
