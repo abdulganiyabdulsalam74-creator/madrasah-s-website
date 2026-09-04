@@ -177,16 +177,17 @@ html, body {
 }
 
 .under_top_services{
-  text-align: center;
   font-family: Amiri;
   font-weight: 800;
   font-style: bold;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
+  text-align: left;
 }
 
 .third_under_services{
+  text-align: left;
   font-family: inter;
   font-weight: 400;
   font-style: regular;
@@ -194,16 +195,16 @@ html, body {
   line-height: 150%;
   letter-spacing: 0%;
   color: purple;
-  text-align: center;
 }
 
 .second_child_services{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .stroke{
@@ -213,6 +214,206 @@ html, body {
 
 }
 
+.third_text{
+  font-size: 14px;
+  font-style: regular;
+  font-weight: 400;
+  line-height: 150%;
+  color: purple;
+}
+
+.icon4{
+  display: flex;
+  justify-content: space-between;
+}
+
+.third_child_services{
+  border: 4px red solid;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  text-align: left;
+}
+
+.fourth_child_services{
+  border: 4px red solid;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.image{
+  border-radius: 16px;
+}
+
+.about1{
+  font-size: 14px;
+  font-family: Inter;
+  font-style: bold;
+  font-weight: 700;
+  color: burlywood;
+}
+
+.about2{
+  font-size: 30px;
+  font-family: Amiri;
+  font-style: bold;
+  font-weight: 700;
+  color: purple;
+}
+
+.about_text{
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 10px;
+}
+
+.about3{
+  font-family: Inter;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  color: purple;
+}
+
+.vector1{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.vector2{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+/* Modern icon + text styling for vector items */
+.vector1, .vector2, .vector3 {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* Circular icon holder for a polished look */
+.vector1 .icon, .vector2 .icon, .vector3 .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  flex: 0 0 48px;
+}
+
+/* ensure raw img inside the icon holder fits nicely */
+.vector1 img, .vector2 img, .vector3 img {
+  display: block;
+  max-width: 60%;
+  height: auto;
+}
+
+/* Text area: slightly larger, readable, subtle color */
+.vector1 span, .vector2 span, .vector3 span {
+  flex: 1 1 auto;
+  line-height: 1.35;
+  color: rgba(75,0,130,0.95); /* deep purple */
+  font-size: 15px;
+}
+
+.vector1:hover .icon, .vector2:hover .icon, .vector3:hover .icon {
+  transform: translateY(-3px);
+  transition: transform 200ms ease;
+}
+
+/* Mobile: scale down icon holder and spacing */
+@media (max-width: 768px) {
+  .vector1, .vector2, .vector3 { gap: 10px; }
+  .vector1 .icon, .vector2 .icon, .vector3 .icon { width: 40px; height: 40px; flex: 0 0 40px; }
+  .vector1 img, .vector2 img, .vector3 img { max-width: 60%; }
+  .vector1 span, .vector2 span, .vector3 span { font-size: 14px; }
+}
+
+/* Backwards-compatible styling for raw <img> children (no HTML changes required):
+   make the image sit inside a circular background with padding and shadow */
+.vector1 > img, .vector2 > img, .vector3 > img {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .vector1 > img, .vector2 > img, .vector3 > img { width: 40px; height: 40px; padding: 6px; }
+}
+
+.vector{
+  text-align: left
+}
+
+span{
+  color: purple;
+}
+
+.button_about{
+  display: flex;
+  padding-bottom: 14px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 14px;
+  background-color: burlywood;
+  color: black;
+  width: 324px;
+  height: 47px;
+  border-radius: 6px;
+  font-family: Inter;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.vector3{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.halqoh{
+  font-style: bold;
+  font-weight: 700;
+  font-family: Amiri;
+  font-size: 24px;
+}
+
+.fourth_text{
+  font-family: Inter;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 14px;
+  color: purple;
+}
+
+.time3{
+  display: flex;
+  gap: 5px;
+}
+
 .first_children_services{
   border: 4px red solid;
   gap: 10px;
@@ -220,36 +421,54 @@ html, body {
   flex-direction: column;
 }
 
+img{
+  text-align: left;
+}
+
 .second_children_services{
   border: 4px red solid;
   gap: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
+  padding: 15px;
+  text-align: left;
 }
 
-.weekend{
+.Weekend{
   font-weight: 700;
   font-style: bold;
   font-size: 24px;
   font:Amiri;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-left: 15px;
 }
 
 .icon1{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 15px;
 }
 
 .icon2{
+   display: flex;
+  justify-content: space-between;
+  gap: 210px;
+}
+
+.icon3{
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  gap: 30px;
+  justify-content: space-between;
+}
+
+.jumah{
+  display: flex;
+  font-size: 24px;
+  font-style: bold;
+  font-weight: 700;
+  font-family: Amiri;
 }
 
 .Weekdays{
@@ -258,15 +477,14 @@ html, body {
   font-size: 24px;
   font:Amiri;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .time2{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
   gap: 5px;
 }
 
@@ -279,7 +497,7 @@ html, body {
   padding-left: 10px;
   padding-right: 10px;
   flex-wrap: wrap;
-  text-align: center;
+  text-align: left;
 }
 
 .second_text{
@@ -287,7 +505,7 @@ html, body {
   font-weight: 400;
   font-style:regular;
   color:Purple;
-  text-align: center;
+  text-align: left;
 }
 
 .time1{
@@ -403,8 +621,9 @@ h2{
 }
 
 .about{
-  background-color: blue;
-  color: goldenrod;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .ourcorevalues{
@@ -665,4 +884,86 @@ h2{
       width: calc(100% - 32px);
       justify-content: center;
     }
+}
+
+/* Extra small-screen-only adjustments: these rules only apply to devices <=768px */
+@media (max-width: 768px) {
+  /* Make services stack into a single column on small screens */
+  .second_child_services{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+    align-items: stretch;
+  }
+
+  .second_child_services > * {
+    width: 100%;
+  }
+
+  /* Make cards more compact and mobile-friendly */
+  .first_children_services,
+  .second_children_services,
+  .third_child_services,
+  .fourth_child_services{
+    padding: 12px;
+    min-height: auto;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+
+  /* Stack about section vertically and make images fluid */
+  .about{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 12px;
+  }
+
+  .image, .about_text{ width: 100%; flex: none; }
+  .image img{ width: 100%; height: auto; display: block; }
+
+  /* Tidy icon spacing on mobile so frame images remain small */
+  .icon2{ gap: 12px; justify-content: flex-start; }
+  .icon2 img:first-child{ flex: 0 0 48px; width: 48px; }
+  .icon2 img:last-child{ flex: 0 0 96px; width: 96px; }
+
+  /* Make CTA button full-width on mobile */
+  .button_about{ width: 100%; max-width: none; }
+}
+
+/* Small-screen icon sizing and spacing (only affects <=768px) */
+@media (max-width: 768px) {
+  .icon1, .icon2, .icon3, .icon4 {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px; /* space below each icon block */
+  }
+
+  .icon1 img, .icon2 img, .icon3 img, .icon4 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* smaller square icon */
+  .icon1 img:first-child,
+  .icon2 img:first-child,
+  .icon3 img:first-child,
+  .icon4 img:first-child {
+    flex: 0 0 44px;
+    width: 44px;
+  }
+
+  /* smaller frame image */
+  .icon1 img:last-child,
+  .icon2 img:last-child,
+  .icon3 img:last-child,
+  .icon4 img:last-child {
+    flex: 0 0 88px;
+    width: 88px;
+    object-fit: contain;
+  }
 }
