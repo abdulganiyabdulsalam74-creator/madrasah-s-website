@@ -358,16 +358,79 @@ html, body {
   object-fit: contain;
 }
 
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2d1b69 0%, #4a2c8a 50%, #6b46c1 100%);
+  color: white;
+  flex-direction: row;
+  padding-top: 0;
+  gap: 40px;
+}
+
+.contact_logo{
+  border-radius: 20px ;
+  height: 70px;
+  width: 60px;
+}
+
+.logo_contact{
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.hi{
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  flex-direction: column;
+}
+
+.contact_logo_text{
+  color: white;
+  font-size: 25px;
+}
+
+.contact_logo_text2{
+  color: burlywood;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: bold;
+  font-size: 12px;
+}
+
+.first_column{
+  display: flex;
+  flex-direction: column;
+}
+
+.second_column{
+  display: flex;
+  color: white;
+  text-align: left;
+  flex-direction: column;
+  padding-top: 0;
+  gap: 20px;
+}
+
+.second_column_header{
+  font-family: Arial Rounded MT;
+  font-size: 19px;
+}
+
+.second_column_header_texts{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 @media (max-width: 768px) {
-  .vector1 > img, .vector2 > img, .vector3 > img { width: 40px; height: 40px; padding: 6px; }
+  .vector1 > img, .vector2 > img, .vector3 > img { width: 20px; height: 20px; padding: 6px; }
 }
 
 .vector{
   text-align: left
-}
-
-span{
-  color: purple;
 }
 
 .button_about{
@@ -419,11 +482,133 @@ span{
   gap: 10px;
   display: flex;
   flex-direction: column;
+  padding: 15px;
 }
 
 img{
   text-align: left;
 }
+
+.body2{
+        background: linear-gradient(135deg, #2d1b69 0%, #4a2c8a 50%, #6b46c1 100%);
+        padding: 40px 20px;
+        min-height: 100vh;
+        color: white;
+        /* Geometric pattern overlay */
+        background-image: 
+            linear-gradient(135deg, #2d1b69 0%, #4a2c8a 50%, #6b46c1 100%),
+            url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+        background-size: cover, 80px 80px;
+
+}
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        border: 1px dashed rgba(255, 255, 255, 0.3);
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+      .header2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .brand::before, .brand::after {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        padding: 25px;
+        position: relative;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .number {
+        width: 35px;
+        height: 35px;
+        background: #fbbf24;
+        color: #2d1b69;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .arabic {
+        font-size: 1.1rem;
+        font-weight: 500;
+        direction: rtl;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
 
 .second_children_services{
   border: 4px red solid;
