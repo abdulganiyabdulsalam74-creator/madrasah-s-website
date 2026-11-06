@@ -1,3 +1,27 @@
+<?php
+
+date_default_timezone_set('Africa/Lagos');
+
+$currentYear = date('Y');
+
+$date = date('d-m-Y');
+
+$api = "https://api.aladhan.com/v1/timingsByCity/$date?city=Lagos&country=Nigeria&method=3";
+
+$response = @file_get_contents($api);
+
+$prayerTimes = null;
+
+if ($response !== false) {
+    $data = json_decode($response, true);
+
+    if (isset($data['data']['timings'])) {
+        $prayerTimes = $data['data']['timings'];
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -238,30 +262,123 @@
             </div>
         </div>
          <div id="contact" class="contact">
-            <div class="first_column">
-                <div class="logo_contact">
-                <img src="IMG-20260621-WA0017.jpg" alt="#" class="contact_logo">
-                <div class="hi">
-                <div class="contact_logo_text">
-                    <span>
-                        Al-Abroor Madrasah
-                    </span>
-                    </div>
-                    <div class="contact_logo_text2">
-                        <span>
-                            THE INSTITUTE OF LEARNING
-                        </span>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="contact_logo_text3">
-                        <span>
-                            Providing reliable structured curriculum, preserving authentic creed, and cultivating noblee Prophetic conduct.
-                        </span>
-                    </div>
-                </div>
                 <div class="second_column">
-                    <div class="second_column_header">
+                    <footer class="xqz-madrasa-footer">
+
+    <div class="xqz-footer-container">
+
+        <!-- QUICK PATHS -->
+
+        <div class="xqz-navigation-area">
+
+            <h3>QUICK PATHS</h3>
+
+            <a href="#">Our Methodology</a>
+
+            <a href="#">Weekend Madrasah</a>
+
+            <a href="#">Adult Weekday Pathway</a>
+
+            <a href="#">Upcoming Seminars</a>
+
+            <a href="#">Admissions &amp; Fees</a>
+
+        </div>
+
+
+        <!-- PRAYER TIMES -->
+
+        <div class="xqz-prayer-area xqz-prayer-area--full">
+
+            <h3>🕌 WEEKLY PRAYER TIMES</h3>
+
+            <p id="xqz-location">Lagos, Nigeria</p>
+
+            <?php if ($prayerTimes): ?>
+
+                <div>
+                    <span>Fajr</span>
+                    <b><?= htmlspecialchars($prayerTimes['Fajr']) ?></b>
+                </div>
+
+                <div>
+                    <span>Dhuhr</span>
+                    <b><?= htmlspecialchars($prayerTimes['Dhuhr']) ?></b>
+                </div>
+
+                <div>
+                    <span>Asr</span>
+                    <b><?= htmlspecialchars($prayerTimes['Asr']) ?></b>
+                </div>
+
+                <div>
+                    <span>Maghrib</span>
+                    <b><?= htmlspecialchars($prayerTimes['Maghrib']) ?></b>
+                </div>
+
+                <div>
+                    <span>Isha</span>
+                    <b><?= htmlspecialchars($prayerTimes['Isha']) ?></b>
+                </div>
+
+            <?php else: ?>
+
+                <p>Prayer times temporarily unavailable.</p>
+
+            <?php endif; ?>
+
+            <small>
+                Updated: <?= date('d M Y') ?>
+            </small>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="xqz-contact-area">
+
+            <h3>CONTACT HEADQUARTERS</h3>
+
+            <p>
+                📍 Al-Abroor Campus, 12 Masjid Al-Abroor Avenue,
+                Surulere District
+            </p>
+
+            <p>📞 +1 (234) 567-8900</p>
+
+            <p>✉ admissions@al-abroor.edu</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM SECTION -->
+
+    <div class="xqz-footer-bottom">
+
+        <p>
+            © <?= $currentYear ?>
+            Al-Abroor Madrasah — The Institute of Learning.
+            All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms of Service</a>
+
+            <a href="#">Student Portal</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+                    <!-- <div class="second_column_header">
                         QUICK PATHS
                     </div>
                     <div class="second_column_header_texts">
@@ -272,7 +389,7 @@
                             Upcoming Seminars <br>
                             Admissions & Fees 
                         </span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
          </div>
