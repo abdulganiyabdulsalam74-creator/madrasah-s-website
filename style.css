@@ -153,6 +153,557 @@ html, body {
   align-items: center;
 }
 
+.first_child_services{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.top_heading_services{
+  display: flex;
+  gap: 10px;
+  font-family: inter;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: bold;
+  letter-spacing: 2px;
+  justify-content: center;
+  color: purple;
+  border: 2px solid brown;
+  align-items: center;
+}
+
+.under_top_services{
+  font-family: Amiri;
+  font-weight: 800;
+  font-style: bold;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.third_under_services{
+  text-align: left;
+  font-family: inter;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: purple;
+}
+
+.second_child_services{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.stroke{
+  width: 40px;
+  height: 2px;
+ background-color: purple;
+
+}
+
+.third_text{
+  font-size: 14px;
+  font-style: regular;
+  font-weight: 400;
+  line-height: 150%;
+  color: purple;
+}
+
+.icon4{
+  display: flex;
+  justify-content: space-between;
+}
+
+.third_child_services{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+  min-height: 280px;
+  justify-content: space-between;
+}
+
+.fourth_child_services{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  min-height: 280px;
+  justify-content: space-between;
+}
+
+.image{
+  border-radius: 16px;
+}
+
+.about1{
+  font-size: 14px;
+  font-family: Inter;
+  font-style: bold;
+  font-weight: 700;
+  color: burlywood;
+}
+
+.about2{
+  font-size: 30px;
+  font-family: Amiri;
+  font-style: bold;
+  font-weight: 700;
+  color: purple;
+}
+
+.about_text{
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 10px;
+}
+
+.about3{
+  font-family: Inter;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  color: purple;
+}
+
+.vector1{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.vector2{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+/* Modern icon + text styling for vector items */
+.vector1, .vector2, .vector3 {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* Circular icon holder for a polished look */
+.vector1 .icon, .vector2 .icon, .vector3 .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  flex: 0 0 48px;
+}
+
+/* ensure raw img inside the icon holder fits nicely */
+.vector1 img, .vector2 img, .vector3 img {
+  display: block;
+  max-width: 60%;
+  height: auto;
+}
+
+/* Text area: slightly larger, readable, subtle color */
+.vector1 span, .vector2 span, .vector3 span {
+  flex: 1 1 auto;
+  line-height: 1.35;
+  color: rgba(75,0,130,0.95); /* deep purple */
+  font-size: 15px;
+}
+
+.vector1:hover .icon, .vector2:hover .icon, .vector3:hover .icon {
+  transform: translateY(-3px);
+  transition: transform 200ms ease;
+}
+
+/* Mobile: scale down icon holder and spacing */
+@media (max-width: 768px) {
+  .vector1, .vector2, .vector3 { gap: 10px; }
+  .vector1 .icon, .vector2 .icon, .vector3 .icon { width: 40px; height: 40px; flex: 0 0 40px; }
+  .vector1 img, .vector2 img, .vector3 img { max-width: 60%; }
+  .vector1 span, .vector2 span, .vector3 span { font-size: 14px; }
+}
+
+/* Backwards-compatible styling for raw <img> children (no HTML changes required):
+   make the image sit inside a circular background with padding and shadow */
+.vector1 > img, .vector2 > img, .vector3 > img {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  object-fit: contain;
+}
+
+.contact{
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #2d1b69 0%, #4a2c8a 50%, #6b46c1 100%);
+  color: white;
+  padding: 0;
+}
+
+.contact_logo{
+  border-radius: 20px ;
+  height: 70px;
+  width: 60px;
+}
+
+.logo_contact{
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.hi{
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  flex-direction: column;
+}
+
+.contact_logo_text{
+  color: white;
+  font-size: 25px;
+}
+
+.contact_logo_text2{
+  color: burlywood;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: bold;
+  font-size: 12px;
+}
+
+.first_column{
+  display: flex;
+  flex-direction: column;
+}
+
+.second_column{
+  display: block;
+  width: 100%;
+  color: white;
+  text-align: left;
+  padding: 0;
+}
+
+.second_column_header{
+  font-family: Arial Rounded MT;
+  font-size: 19px;
+}
+
+.second_column_header_texts{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .vector1 > img, .vector2 > img, .vector3 > img { width: 20px; height: 20px; padding: 6px; }
+}
+
+.vector{
+  text-align: left
+}
+
+.button_about{
+  display: flex;
+  padding-bottom: 14px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 14px;
+  background-color: burlywood;
+  color: black;
+  width: 324px;
+  height: 47px;
+  border-radius: 6px;
+  font-family: Inter;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.vector3{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.halqoh{
+  font-style: bold;
+  font-weight: 700;
+  font-family: Amiri;
+  font-size: 24px;
+}
+
+.fourth_text{
+  font-family: Inter;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 14px;
+  color: purple;
+}
+
+.time3{
+  display: flex;
+  gap: 5px;
+}
+
+.first_children_services{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  min-height: 280px;
+  justify-content: space-between;
+}
+
+img{
+  text-align: left;
+}
+
+.body2{
+        background: linear-gradient(135deg, #2d1b69 0%, #4a2c8a 50%, #6b46c1 100%);
+        padding: 40px 20px;
+        min-height: 100vh;
+        color: white;
+        /* Geometric pattern overlay */
+        background-image: 
+            linear-gradient(135deg, #2d1b69 0%, #4a2c8a 50%, #6b46c1 100%),
+            url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+        background-size: cover, 80px 80px;
+
+}
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        border: 1px dashed rgba(255, 255, 255, 0.3);
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+      .header2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .brand::before, .brand::after {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        padding: 25px;
+        position: relative;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .number {
+        width: 35px;
+        height: 35px;
+        background: #fbbf24;
+        color: #2d1b69;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .arabic {
+        font-size: 1.1rem;
+        font-weight: 500;
+        direction: rtl;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+
+.second_children_services{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+  min-height: 280px;
+  justify-content: space-between;
+}
+
+.Weekend{
+  font-weight: 700;
+  font-style: bold;
+  font-size: 24px;
+  font:Amiri;
+  display: flex;
+  padding-left: 15px;
+}
+
+.icon1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.icon2{
+   display: flex;
+  justify-content: space-between;
+  gap: 210px;
+}
+
+.icon3{
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumah{
+  display: flex;
+  font-size: 24px;
+  font-style: bold;
+  font-weight: 700;
+  font-family: Amiri;
+}
+
+.Weekdays{
+  font-weight: 700;
+  font-style: bold;
+  font-size: 24px;
+  font:Amiri;
+  display: flex;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.time2{
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 5px;
+}
+
+.first_text{
+  font-family: inter;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 14px;
+  color: purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.second_text{
+  font-size:14px;
+  font-weight: 400;
+  font-style:regular;
+  color:Purple;
+  text-align: left;
+}
+
+.time1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
 .hamburger span {
   display: block;
   height: 3px;
@@ -168,26 +719,24 @@ html, body {
 }
 
 .button1{
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 16px 24px;
-  min-height: 40px;
+  gap: 5px;
+  /* padding: 16px 24px; */
+  height: 60px;
   border: 2px solid burlywood;
   border-radius: 10px;
   background-color: burlywood;
   color: black;
   text-decoration: none;
-  list-style: none;
 }
 
-.button1 img{
+/* .button1 img{
   height: 20px;
   width: auto;
   display: block;
-  /* filter: invert(1) brightness(1.2); */
-}
+} */
 
 .methology{
 display: flex;
@@ -212,7 +761,7 @@ gap: 10px;
   display: flex;
   gap: 12px;
   align-items: center;
-}
+} 
 
 h6{
   color:white;
@@ -236,8 +785,7 @@ h6{
 }
 
 h6{
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 500;
+  font-family: inter ;
   font-size: 0.9rem;
   line-height: 1.25;
   letter-spacing: 0.01em;
@@ -252,15 +800,166 @@ h2{
 }
 
 .ourservices{
-  background-color: orange;
+  /* background-color: orange;
   color: white;
   font-family: mv boli;
-  height: max-content;
+  height: max-content; */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 60px;
+  background: linear-gradient(180deg, #fffdfd 0%, #f7f1ff 100%);
 }
 
 .about{
-  background-color: blue;
-  color: goldenrod;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (min-width: 980px) {
+  .ourservices {
+    padding: 70px 40px 90px;
+  }
+
+  .first_child_services {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 28px;
+    padding: 0 12px;
+  }
+
+  .top_heading_services {
+    border-radius: 999px;
+    padding: 10px 18px;
+    background: rgba(128, 0, 128, 0.04);
+    border: 1px solid rgba(128, 0, 128, 0.12);
+    box-shadow: 0 8px 18px rgba(69, 34, 92, 0.06);
+  }
+
+  .under_top_services {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .under_top_services span {
+    display: block;
+    font-size: clamp(2.2rem, 3vw, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+  }
+
+  .third_under_services {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+    color: rgba(84, 38, 100, 0.82);
+  }
+
+  .second_child_services {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 22px;
+    align-items: stretch;
+  }
+
+  .first_children_services,
+  .second_children_services,
+  .third_child_services,
+  .fourth_child_services {
+    background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
+    border: 1px solid rgba(128, 0, 128, 0.12);
+    border-radius: 22px;
+    box-shadow: 0 18px 40px rgba(50, 25, 73, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    padding: 20px 18px 18px;
+    min-height: 310px;
+  }
+
+  .first_children_services:hover,
+  .second_children_services:hover,
+  .third_child_services:hover,
+  .fourth_child_services:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 42px rgba(50, 25, 73, 0.12);
+    border-color: rgba(128, 0, 128, 0.18);
+  }
+
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .icon1 img:first-child,
+  .icon2 img:first-child,
+  .icon3 img:first-child,
+  .icon4 img:first-child {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: rgba(128, 0, 128, 0.06);
+    padding: 8px;
+    box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.08);
+  }
+
+  .icon1 img:last-child,
+  .icon2 img:last-child,
+  .icon3 img:last-child,
+  .icon4 img:last-child {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.92;
+  }
+
+  .Weekend,
+  .Weekdays,
+  .jumah,
+  .halqoh {
+    font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+    line-height: 1.2;
+    margin: 4px 0 10px;
+    color: #2d0d46;
+  }
+
+  .first_text,
+  .second_text,
+  .third_text,
+  .fourth_text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(66, 32, 77, 0.8);
+    margin-top: auto;
+  }
+
+  .time1,
+  .time2,
+  .time3,
+  .time4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 12px;
+    color: #5e2b72;
+    font-size: 13px;
+  }
+
+  .time1 img,
+  .time2 img,
+  .time3 img,
+  .time4 img {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .ourcorevalues{
@@ -285,13 +984,6 @@ h2{
       z-index: 1000;
       min-height: 64px; /* keep header height stable so hamburger stays aligned */
     }
-
-    /* adjust top spacing for main content on smaller screens */
-    .main-body {
-      /* main-body will be pushed down by body padding */
-    }
-
-
 
     /* keep logo at the very top */
     .logo-container {
@@ -529,3 +1221,947 @@ h2{
       justify-content: center;
     }
 }
+
+/* Extra small-screen-only adjustments: these rules only apply to devices <=768px */
+@media (max-width: 768px) {
+  /* Make services stack into a single column on small screens */
+  .second_child_services{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+    align-items: stretch;
+  }
+
+  .second_child_services > * {
+    width: 100%;
+  }
+
+  /* Make cards more compact and mobile-friendly */
+  .first_children_services,
+  .second_children_services,
+  .third_child_services,
+  .fourth_child_services{
+    padding: 12px;
+    min-height: auto;
+    box-shadow: none;
+    border-radius: 10px;
+    border: none;
+  }
+
+  /* Stack about section vertically and make images fluid */
+  .about{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 12px;
+  }
+
+  .image, .about_text{ width: 100%; flex: none; }
+  .image img{ width: 100%; height: auto; display: block; }
+
+  /* Tidy icon spacing on mobile so frame images remain small */
+  .icon2{ gap: 12px; justify-content: flex-start; }
+  .icon2 img:first-child{ flex: 0 0 48px; width: 48px; }
+  .icon2 img:last-child{ flex: 0 0 96px; width: 96px; }
+
+  /* Make CTA button full-width on mobile */
+  .button_about{ width: 100%; max-width: none; }
+}
+
+/* Small-screen icon sizing and spacing (only affects <=768px) */
+@media (max-width: 768px) {
+  .icon1, .icon2, .icon3, .icon4 {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px; /* space below each icon block */
+  }
+
+  .icon1 img, .icon2 img, .icon3 img, .icon4 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* smaller square icon */
+  .icon1 img:first-child,
+  .icon2 img:first-child,
+  .icon3 img:first-child,
+  .icon4 img:first-child {
+    flex: 0 0 44px;
+    width: 44px;
+  }
+
+  /* smaller frame image */
+  .icon1 img:last-child,
+  .icon2 img:last-child,
+  .icon3 img:last-child,
+  .icon4 img:last-child {
+    flex: 0 0 88px;
+    width: 88px;
+    object-fit: contain;
+  }
+}
+/* MAIN FOOTER */
+
+.xqz-madrasa-footer {
+
+    width: 100%;
+
+    background:
+        radial-gradient(
+            circle at 70% 20%,
+            rgba(155, 95, 220, 0.35),
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #160d35,
+            #29105c,
+            #482080
+        );
+
+    color: #fff;
+
+    padding: 35px 5%;
+
+    box-sizing: border-box;
+
+    font-family: Georgia, serif;
+
+}
+
+
+/* FOUR COLUMN LAYOUT */
+
+.xqz-footer-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid
+    rgba(255,255,255,0.25);
+
+}
+
+
+/* BRAND SECTION */
+
+.xqz-brand-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.xqz-brand-heading img {
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+}
+
+.xqz-brand-heading h2 {
+
+    font-size: 22px;
+
+    margin: 0 0 7px;
+
+}
+
+.xqz-brand-heading span {
+
+    font-size: 10px;
+
+    color: #e5c77d;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+
+}
+
+.xqz-brand-area p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-top: 18px;
+
+}
+
+
+/* QUICK PATHS */
+
+.xqz-navigation-area h3,
+.xqz-contact-area h3 {
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+
+}
+
+.xqz-navigation-area a {
+
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+
+}
+
+.xqz-navigation-area a:hover {
+
+    color: #e5c77d;
+
+    padding-left: 4px;
+
+}
+
+
+/* PRAYER TIMES */
+
+.xqz-prayer-area {
+
+    background: rgba(150, 80, 220, 0.28);
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+}
+
+.xqz-prayer-area h3 {
+
+    font-size: 12px;
+
+    margin: 0 0 15px;
+
+    color: #f2d48c;
+
+}
+
+.xqz-prayer-area div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+
+}
+
+.xqz-prayer-area b {
+
+    font-size: 11px;
+
+}
+
+.xqz-prayer-area small {
+
+    display: block;
+
+    font-size: 10px;
+
+    margin-top: 12px;
+
+    color: #e5c77d;
+
+}
+
+#xqz-location {
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* CONTACT */
+
+.xqz-contact-area p {
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* BOTTOM SECTION */
+
+.xqz-footer-bottom {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+.xqz-footer-bottom p {
+
+    font-size: 11px;
+
+}
+
+.xqz-footer-bottom a {
+
+    color: #e5c77d;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    margin-left: 12px;
+
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 850px) {
+
+    .xqz-footer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .xqz-footer-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .xqz-footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+/* =====================================
+   AL-ABROOR MADRASAH FOOTER
+   COMPLETE RESPONSIVE DESIGN
+===================================== */
+
+
+/* MAIN FOOTER */
+
+.xqz-madrasa-footer {
+    width: 100%;
+    background:
+        radial-gradient(
+            circle at 70% 20%,
+            rgba(155, 95, 220, 0.35),
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #160d35,
+            #29105c,
+            #482080
+        );
+
+    color: #fff;
+    padding: 35px 5%;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+
+/* FOUR COLUMN LAYOUT */
+
+.xqz-footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.85fr 0.95fr 1.1fr;
+    gap: 25px;
+    max-width: 1400px;
+    margin: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+
+/* BRAND SECTION */
+
+.xqz-brand-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.xqz-brand-heading img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.xqz-brand-heading h2 {
+    font-size: 22px;
+    margin: 0 0 7px;
+}
+
+.xqz-brand-heading span {
+    font-size: 10px;
+    color: #e5c77d;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.xqz-brand-area p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 18px;
+}
+
+
+/* QUICK PATHS */
+
+.xqz-navigation-area h3,
+.xqz-contact-area h3 {
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.xqz-navigation-area a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.xqz-navigation-area a:hover {
+    color: #e5c77d;
+    padding-left: 4px;
+}
+
+
+/* PRAYER TIMES */
+
+.xqz-prayer-area {
+    background: rgba(150, 80, 220, 0.28);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.xqz-prayer-area--full {
+    width: 100%;
+    max-width: 100%;
+    padding: 22px 22px 18px;
+    background: linear-gradient(135deg, rgba(177, 121, 255, 0.22), rgba(72, 32, 128, 0.45));
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 18px 40px rgba(12, 7, 23, 0.18);
+}
+
+.xqz-prayer-area h3 {
+    font-size: 12px;
+    margin: 0 0 15px;
+    color: #f2d48c;
+}
+
+.xqz-prayer-area div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.xqz-prayer-area b {
+    font-size: 11px;
+}
+
+.xqz-prayer-area small {
+    display: block;
+    font-size: 10px;
+    margin-top: 12px;
+    color: #e5c77d;
+}
+
+#xqz-location {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+
+/* CONTACT SECTION */
+
+.xqz-contact-area p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+
+/* COPYRIGHT SECTION */
+
+.xqz-footer-bottom {
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.xqz-footer-bottom p {
+    font-size: 11px;
+}
+
+.xqz-footer-bottom a {
+    color: #e5c77d;
+    text-decoration: none;
+    font-size: 11px;
+    margin-left: 12px;
+}
+
+
+/* =====================================
+   TABLET VIEW
+===================================== */
+
+@media screen and (max-width: 850px) {
+
+    .xqz-madrasa-footer {
+        padding: 30px 25px;
+    }
+
+    .xqz-footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .xqz-brand-heading h2 {
+        font-size: 19px;
+    }
+
+    .xqz-prayer-area {
+        padding: 18px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE PHONE VIEW
+===================================== */
+
+@media screen and (max-width: 550px) {
+
+    .xqz-madrasa-footer {
+        padding: 20px 14px 14px;
+        background:
+            radial-gradient(circle at top, rgba(198, 146, 255, 0.18), transparent 35%),
+            linear-gradient(135deg, #160d35 0%, #24114a 45%, #432575 100%);
+    }
+
+    .xqz-footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding-bottom: 14px;
+        width: 100%;
+    }
+
+    .xqz-prayer-area {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        padding: 16px 14px;
+        box-shadow: 0 8px 20px rgba(8, 2, 18, 0.18);
+        backdrop-filter: blur(2px);
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .xqz-prayer-area--full {
+        padding: 18px 14px;
+    }
+
+    .xqz-brand-heading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .xqz-brand-heading img {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        flex-shrink: 0;
+    }
+
+    .xqz-brand-heading h2 {
+        font-size: 17px;
+        line-height: 1.3;
+        margin: 0 0 5px;
+        word-break: break-word;
+    }
+
+    .xqz-brand-heading span {
+        font-size: 8px;
+        letter-spacing: 0.9px;
+        line-height: 1.4;
+    }
+
+    .xqz-brand-area p {
+        font-size: 12.5px;
+        line-height: 1.7;
+        margin-top: 12px;
+        color: rgba(255,255,255,0.82);
+    }
+
+    .xqz-navigation-area h3,
+    .xqz-contact-area h3 {
+        font-size: 12px;
+        margin: 0 0 10px;
+        letter-spacing: 0.08em;
+        color: #f2d48c;
+        text-transform: uppercase;
+    }
+
+    .xqz-navigation-area a {
+        display: block;
+        font-size: 12.5px;
+        margin-bottom: 8px;
+        padding: 9px 10px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.05);
+        line-height: 1.5;
+        word-break: break-word;
+    }
+
+    .xqz-prayer-area {
+        padding: 14px 12px;
+        border-radius: 16px;
+    }
+
+    .xqz-prayer-area h3 {
+        font-size: 12px;
+        margin: 0 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: 0.04em;
+    }
+
+    .xqz-prayer-area h3::before {
+        content: "🕌";
+        font-size: 13px;
+    }
+
+    .xqz-prayer-area div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        font-size: 11.5px;
+        margin-bottom: 8px;
+        padding: 8px 9px;
+        background: rgba(12, 7, 23, 0.18);
+        border: 1px solid rgba(255,255,255,0.04);
+        border-radius: 9px;
+        line-height: 1.4;
+    }
+
+    .xqz-prayer-area span,
+    .xqz-prayer-area b {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .xqz-prayer-area small {
+        font-size: 10px;
+        letter-spacing: 0.03em;
+    }
+
+    #xqz-location {
+        margin-bottom: 10px;
+        font-size: 10.5px;
+        color: rgba(255,255,255,0.8);
+    }
+
+    .xqz-contact-area p {
+        font-size: 12px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+        word-break: break-word;
+    }
+
+    .xqz-footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-top: 14px;
+    }
+
+    .xqz-footer-bottom p {
+        font-size: 10.5px;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .xqz-footer-bottom div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+        width: 100%;
+    }
+
+    .xqz-footer-bottom a {
+        font-size: 10.5px;
+        margin-left: 0;
+        padding: 6px 8px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.06);
+    }
+
+}
+
+
+/* =====================================
+   SMALL PHONE BREAKPOINTS
+===================================== */
+
+@media screen and (max-width: 400px) {
+
+    .xqz-madrasa-footer {
+        padding: 18px 12px 12px;
+    }
+
+    .xqz-footer-container {
+        gap: 12px;
+    }
+
+    .xqz-brand-area,
+    .xqz-navigation-area,
+    .xqz-prayer-area,
+    .xqz-contact-area {
+        padding: 12px 10px;
+        border-radius: 14px;
+    }
+
+    .xqz-brand-heading {
+        gap: 9px;
+        align-items: flex-start;
+    }
+
+    .xqz-brand-heading img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .xqz-brand-heading h2 {
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .xqz-brand-heading span {
+        font-size: 7px;
+        letter-spacing: 0.8px;
+    }
+
+    .xqz-brand-area p,
+    .xqz-navigation-area a,
+    .xqz-contact-area p,
+    .xqz-prayer-area div,
+    .xqz-prayer-area small,
+    .xqz-footer-bottom p,
+    .xqz-footer-bottom a {
+        font-size: 10.5px;
+        line-height: 1.6;
+    }
+
+    .xqz-navigation-area h3,
+    .xqz-contact-area h3,
+    .xqz-prayer-area h3 {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .xqz-navigation-area a {
+        padding: 8px 9px;
+        margin-bottom: 6px;
+    }
+
+    .xqz-prayer-area div {
+        padding: 7px 8px;
+        margin-bottom: 7px;
+        gap: 6px;
+    }
+
+    .xqz-prayer-area span,
+    .xqz-prayer-area b {
+        font-size: 10px;
+        white-space: normal;
+    }
+
+    .xqz-footer-bottom {
+        gap: 10px;
+        padding-top: 12px;
+    }
+
+    .xqz-footer-bottom div {
+        gap: 6px 8px;
+    }
+
+    .xqz-footer-bottom a {
+        padding: 5px 7px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .xqz-madrasa-footer {
+        padding: 16px 10px 10px;
+    }
+
+    .xqz-brand-heading {
+        gap: 8px;
+    }
+
+    .xqz-brand-heading img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .xqz-brand-heading h2 {
+        font-size: 14px;
+    }
+
+    .xqz-brand-heading span {
+        font-size: 6.8px;
+    }
+
+    .xqz-brand-area p,
+    .xqz-navigation-area a,
+    .xqz-contact-area p,
+    .xqz-prayer-area div,
+    .xqz-prayer-area small,
+    .xqz-footer-bottom p,
+    .xqz-footer-bottom a {
+        font-size: 10px;
+    }
+
+    .xqz-navigation-area a {
+        padding: 7px 8px;
+    }
+
+    .xqz-prayer-area div {
+        padding: 6px 7px;
+    }
+
+    .xqz-footer-bottom a {
+        padding: 5px 6px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .xqz-madrasa-footer {
+        padding: 14px 8px 10px;
+    }
+
+    .xqz-brand-heading img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .xqz-brand-heading h2 {
+        font-size: 13px;
+    }
+
+    .xqz-brand-heading span {
+        font-size: 6px;
+    }
+
+    .xqz-brand-area p,
+    .xqz-navigation-area a,
+    .xqz-contact-area p,
+    .xqz-prayer-area div,
+    .xqz-prayer-area small,
+    .xqz-footer-bottom p,
+    .xqz-footer-bottom a {
+        font-size: 9.5px;
+    }
+
+    .xqz-navigation-area h3,
+    .xqz-contact-area h3,
+    .xqz-prayer-area h3 {
+        font-size: 10px;
+    }
+
+    .xqz-prayer-area div {
+        gap: 4px;
+        padding: 6px 7px;
+    }
+
+    .xqz-footer-bottom div {
+        gap: 4px 6px;
+    }
+
+} 
