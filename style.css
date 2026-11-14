@@ -172,7 +172,6 @@ html, body {
   letter-spacing: 2px;
   justify-content: center;
   color: purple;
-  border: 2px solid brown;
   align-items: center;
 }
 
@@ -771,7 +770,7 @@ h6{
 .main-body{
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-image:url('Gemini.jpeg') ;
   color: white;
   background-size: cover;
   background-blend-mode: multiply;
