@@ -1,27 +1,3 @@
-<?php
-
-date_default_timezone_set('Africa/Lagos');
-
-$currentYear = date('Y');
-
-$date = date('d-m-Y');
-
-$api = "https://api.aladhan.com/v1/timingsByCity/$date?city=Lagos&country=Nigeria&method=3";
-
-$response = @file_get_contents($api);
-
-$prayerTimes = null;
-
-if ($response !== false) {
-    $data = json_decode($response, true);
-
-    if (isset($data['data']['timings'])) {
-        $prayerTimes = $data['data']['timings'];
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -294,42 +270,12 @@ if ($response !== false) {
 
             <p id="xqz-location">Lagos, Nigeria</p>
 
-            <?php if ($prayerTimes): ?>
-
-                <div>
-                    <span>Fajr</span>
-                    <b><?= htmlspecialchars($prayerTimes['Fajr']) ?></b>
-                </div>
-
-                <div>
-                    <span>Dhuhr</span>
-                    <b><?= htmlspecialchars($prayerTimes['Dhuhr']) ?></b>
-                </div>
-
-                <div>
-                    <span>Asr</span>
-                    <b><?= htmlspecialchars($prayerTimes['Asr']) ?></b>
-                </div>
-
-                <div>
-                    <span>Maghrib</span>
-                    <b><?= htmlspecialchars($prayerTimes['Maghrib']) ?></b>
-                </div>
-
-                <div>
-                    <span>Isha</span>
-                    <b><?= htmlspecialchars($prayerTimes['Isha']) ?></b>
-                </div>
-
-            <?php else: ?>
-
-                <p>Prayer times temporarily unavailable.</p>
-
-            <?php endif; ?>
-
-            <small>
-                Updated: <?= date('d M Y') ?>
-            </small>
+            <div><span>Fajr</span><b data-prayer="Fajr">Loading...</b></div>
+            <div><span>Dhuhr</span><b data-prayer="Dhuhr">Loading...</b></div>
+            <div><span>Asr</span><b data-prayer="Asr">Loading...</b></div>
+            <div><span>Maghrib</span><b data-prayer="Maghrib">Loading...</b></div>
+            <div><span>Isha</span><b data-prayer="Isha">Loading...</b></div>
+            <small id="prayer-updated">Fetching prayer times...</small>
 
         </div>
 
@@ -341,8 +287,8 @@ if ($response !== false) {
             <h3>CONTACT HEADQUARTERS</h3>
 
             <p>
-                📍 Al-Abroor Campus, 12 Masjid Al-Abroor Avenue,
-                Surulere District
+                📍 Al-Abroor Campus, adejumo close,
+                Ologogoro, Ogun state Nigeria.
             </p>
 
             <p>📞 +1 (234) 567-8900</p>
@@ -359,7 +305,7 @@ if ($response !== false) {
     <div class="xqz-footer-bottom">
 
         <p>
-            © <?= $currentYear ?>
+            © <span id="current-year"></span>
             Al-Abroor Madrasah — The Institute of Learning.
             All rights reserved.
         </p>
@@ -377,6 +323,38 @@ if ($response !== false) {
     </div>
 
 </footer>
+
+<script>
+    const lagosDate = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Africa/Lagos',
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    }).format(new Date()).replaceAll('/', '-');
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    fetch(`https://api.aladhan.com/v1/timingsByCity/${lagosDate}?city=Lagos&country=Nigeria&method=3`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Prayer times request failed');
+            }
+            return response.json();
+        })
+        .then(({ data }) => {
+            ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'].forEach((prayer) => {
+                const time = data?.timings?.[prayer];
+                document.querySelector(`[data-prayer="${prayer}"]`).textContent = time || 'Unavailable';
+            });
+            document.getElementById('prayer-updated').textContent = `Updated: ${data.date.readable}`;
+        })
+        .catch(() => {
+            document.querySelectorAll('[data-prayer]').forEach((time) => {
+                time.textContent = 'Unavailable';
+            });
+            document.getElementById('prayer-updated').textContent = 'Prayer times temporarily unavailable.';
+        });
+</script>
 
                     <!-- <div class="second_column_header">
                         QUICK PATHS
