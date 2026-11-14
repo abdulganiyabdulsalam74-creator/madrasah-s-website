@@ -325,6 +325,13 @@
 </footer>
 
 <script>
+    const navigationToggle = document.getElementById('nav-toggle');
+    document.querySelector('.nav-right').addEventListener('click', (event) => {
+        if (event.target.closest('a')) {
+            navigationToggle.checked = false;
+        }
+    });
+
     const lagosDate = new Intl.DateTimeFormat('en-GB', {
         timeZone: 'Africa/Lagos',
         day: '2-digit',
